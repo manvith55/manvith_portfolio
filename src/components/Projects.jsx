@@ -36,6 +36,48 @@ export default function Projects() {
       ],
       githubLink: 'https://github.com/manvith55/insect-game',
       demoLink: 'https://manvith55.github.io/insect-game/'
+    },
+    {
+      number: '03',
+      title: 'Smart Digital Banking System',
+      tag: 'Full-Stack Banking & Fraud Detection Platform',
+      description: 'A secure digital banking application where customers can manage accounts, transfer money, and track transactions while administrators monitor banking activity and fraud alerts.',
+      technologies: [
+        'Java',
+        'Spring Boot',
+        'Spring Security',
+        'React',
+        'MySQL',
+        'JWT',
+        'Axios'
+      ],
+      features: [
+        'JWT-based customer and admin authentication',
+        'Deposit, withdrawal, and money transfers',
+        'Beneficiary management',
+        'Transaction history with search and filtering',
+        'Rule-based fraud detection and alerts',
+        'Admin dashboard for users, accounts, and transactions',
+        'Account blocking and unblocking',
+        'Responsive React interface'
+      ],
+      // githubLink: 'https://github.com/manvith55/insect-game'
+    },
+    {
+      number: '04',
+      title: 'AI Resume Platform',
+      tag: 'AI-Powered Resume Builder',
+      description: 'A full-stack platform that helps users create, customize, and optimize professional resumes with AI-powered suggestions and downloadable resume generation.',
+      technologies: ['React', 'Vite', 'Python', 'AI', 'CSS'],
+      features: [
+        'AI-generated resume content',
+        'Professional resume templates',
+        'Resume customization',
+        'Job description optimization',
+        'PDF resume generation',
+        'File upload and download support'
+      ],
+      githubLink: 'https://github.com/manvith55/ai-resume-platform'
     }
   ]
 
@@ -46,7 +88,7 @@ export default function Projects() {
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div
-            key={index}
+            key={project.number}
             className="project-card glass-card"
             onMouseEnter={() => setHoveredProject(index)}
             onMouseLeave={() => setHoveredProject(null)}
@@ -58,38 +100,45 @@ export default function Projects() {
             <p className="project-desc">{project.description}</p>
 
             <div className="project-tech">
-              {project.technologies.map((tech, i) => (
-                <span key={i} className="tech-badge">{tech}</span>
+              {project.technologies.map((tech) => (
+                <span key={`${project.number}-${tech}`} className="tech-badge">{tech}</span>
               ))}
             </div>
 
             <div className={`project-features ${hoveredProject === index ? 'show' : ''}`}>
               <h5>Key Features:</h5>
               <ul>
-                {project.features.map((feature, i) => (
-                  <li key={i}>{feature}</li>
+                {project.features.map((feature) => (
+                  <li key={`${project.number}-${feature}`}>{feature}</li>
                 ))}
               </ul>
             </div>
 
-            <div className="project-buttons">
-              <a 
-                href={project.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn"
-              >
-                GitHub
-              </a>
-              <a 
-                href={project.demoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-outline"
-              >
-                Live Demo
-              </a>
-            </div>
+            {(project.githubLink || project.demoLink) && (
+  <div className="project-buttons">
+    {project.githubLink && (
+      <a
+        href={project.githubLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn"
+      >
+        GitHub
+      </a>
+    )}
+
+    {project.demoLink && (
+          <a
+            href={project.demoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline"
+          >
+            Live Demo
+          </a>
+        )}
+      </div>
+    )}
           </div>
         ))}
       </div>
