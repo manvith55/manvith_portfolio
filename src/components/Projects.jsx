@@ -40,7 +40,7 @@ export default function Projects() {
     {
       number: '03',
       title: 'Smart Digital Banking System',
-      tag: 'Full-Stack Banking & Fraud Detection Platform',
+      tag: 'Full-Stack Banking & Fraud Detection Platform (Production)',
       description: 'A secure digital banking application where customers can manage accounts, transfer money, and track transactions while administrators monitor banking activity and fraud alerts.',
       technologies: [
         'Java',
@@ -61,12 +61,12 @@ export default function Projects() {
         'Account blocking and unblocking',
         'Responsive React interface'
       ],
-      // githubLink: 'https://github.com/manvith55/insect-game'
+      githubLink: 'https://github.com/manvith55/smart-banking-system'
     },
     {
       number: '04',
       title: 'AI Resume Platform',
-      tag: 'AI-Powered Resume Builder',
+      tag: 'AI-Powered Resume Builder (Production)',
       description: 'A full-stack platform that helps users create, customize, and optimize professional resumes with AI-powered suggestions and downloadable resume generation.',
       technologies: ['React', 'Vite', 'Python', 'AI', 'CSS'],
       features: [

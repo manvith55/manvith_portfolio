@@ -6,7 +6,7 @@ export default function Experience() {
     {
       title: 'Frontend Developer Intern',
       company: 'Samriddhi Anveshana',
-      period: 'Jul 2026 – Present',
+      period: 'Jul 2026 – Sep 2026',
       responsibilities: [
         'Developed and enhanced responsive Admin and Client dashboards using React, JavaScript, HTML, and CSS with reusable UI components',
         'Contributed to a React-based Office Management System supporting meeting-room booking, company management, billing, and visitor management',
