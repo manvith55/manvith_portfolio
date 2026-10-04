@@ -78,6 +78,20 @@ export default function Projects() {
         'File upload and download support'
       ],
       githubLink: 'https://github.com/manvith55/ai-resume-platform'
+    },
+    {
+      number: '05',
+      title: 'Student Pass Checker',
+      tag: 'Free Bus Ticket Eligibility Web Application',
+      description: 'A user-friendly web application that verifies student eligibility for free bus tickets based on student status, age, and valid ID, with interactive eligibility checks, dynamic response messages, and ticket booking confirmation.',
+      technologies: ['HTML5', 'CSS3', 'JavaScript'],
+      features: [
+        'Student eligibility verification',
+        'Interactive eligibility checks',
+        'Dynamic response messages',
+        'Ticket booking confirmation'
+      ],
+      githubLink: 'https://github.com/manvith55/student_pass_checker'
     }
   ]
 
